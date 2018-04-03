@@ -50,6 +50,9 @@ class Output {
 
         public static function format($url)
         {
-                echo "<a href='" . $url . "'>link</a> ";
+				// get url size
+				$FileSize = new File_size();
+				$size = FileSize->curl_get_file_size($url);
+                echo "<a href='$url'>link ($size)</a> ";
         }
 }
