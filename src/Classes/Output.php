@@ -52,7 +52,8 @@ class Output {
         {
 				// get url size
 				$FileSize = new File_size();
-				$size = FileSize->curl_get_file_size($url);
+				$size = $FileSize->curl_get_file_size($url);
+				
                 echo "<a href='$url'>link ($size)</a> ";
         }
 }
